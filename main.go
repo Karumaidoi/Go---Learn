@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -44,6 +45,8 @@ func main() {
 	// 	fmt.Println("This is an integer")
 	// }
 
+	// STRINGS
+
 	c := "Dance"
 	fmt.Println(len(c))
 	// d := strings.Join(strings.Split(c, "a"), "")
@@ -71,5 +74,23 @@ func main() {
 
 	fmt.Println(len("Homey"))
 	fmt.Println(append(b, 100), b[len(b)-1], b[0])
+
+	// INTS
+	number := 10
+	number2 := 20
+
+	fmt.Println(number * number2)
+
+	// Convert an String to an Integer
+	s := "100"
+
+	i, err := strconv.Atoi(s)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(i * number2)
+
+	// Convert an Int to a String
 
 }
